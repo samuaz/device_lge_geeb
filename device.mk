@@ -22,8 +22,8 @@
 #enable art and dalvik by default, and also make this shit odexed
 DISABLE_DEXPREOPT := false
 WITH_DEXPREOPT := true
-PRODUCT_RUNTIMES := runtime_libdvm
-PRODUCT_RUNTIMES += runtime_libart_default
+PRODUCT_RUNTIMES := runtime_libdvm_default
+PRODUCT_RUNTIMES += runtime_libart
 
 DEVICE_PACKAGE_OVERLAYS := device/lge/geeb/overlay
 
