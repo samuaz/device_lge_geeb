@@ -22,8 +22,8 @@
 #enable art and dalvik by default, and also make this shit odexed
 DISABLE_DEXPREOPT := false
 WITH_DEXPREOPT := true
-PRODUCT_RUNTIMES := runtime_libdvm_default
-PRODUCT_RUNTIMES += runtime_libart
+PRODUCT_RUNTIMES := runtime_libdvm
+PRODUCT_RUNTIMES += runtime_libart_default
 
 DEVICE_PACKAGE_OVERLAYS := device/lge/geeb/overlay
 
@@ -157,7 +157,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.telephony.call_ring.multiple=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
-persist.hwc.mdpcomp.enable=true \
+persist.hwc.mdpcomp.enable=false \
 debug.enable.wl_log=0 \
 debug.mdpcomp.logs=0
 
@@ -298,3 +298,4 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product, hardware/qcom/msm8960/msm8960.mk)
 $(call inherit-product, frameworks/base/data/sounds/AudioPackage10.mk)
+$(call inherit-product, device/lge/geeb/extras/config/common.mk)

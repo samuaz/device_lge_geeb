@@ -115,11 +115,18 @@ on boot
 
     # Enable DEBUG_SUSPEND, DEBUG_EXIT_SUSPEND, and DEBUG_WAKEUP
     write /sys/module/wakelock/parameters/debug_mask 7
+    
+    #frequencys gpu and cpu
+    write /sys/class/kgsl/kgsl-3d0/max_gpuclk 400000000
+    write /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq 1512000
+    write /sys/devices/system/cpu/cpu*/cpufreq/scaling_min_freq 384000
+    echo 1512000 | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq >/dev/null
+    echo 384000 | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_min_freq >/dev/null
 
     #vm tweaks
     write /proc/sys/vm/swappiness 0
     write /proc/sys/vm/vfs_cache_pressure 1
-    write /proc/sys/vm/dirty_background_ratio 2
+    write /proc/sys/vm/dirty_background_ratio 1
     write /proc/sys/vm/dirty_ratio 100
     write /proc/sys/vm/dirty_writeback_centisecs 500
     write /proc/sys/vm/dirty_expire_centisecs 200
@@ -162,7 +169,6 @@ on boot
     write /proc/sys/net/ipv6/conf/rmnet_sdio5/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet_sdio6/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet_sdio7/accept_ra 2
-
 
 # NFC: create data/nfc for nv storage
     mkdir /data/nfc 770 nfc nfc
