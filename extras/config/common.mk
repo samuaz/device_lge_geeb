@@ -33,11 +33,11 @@ PRODUCT_COPY_FILES += \
     device/lge/geeb/extras/prebuilt/etc/init.local.rc:root/init.samuaz.rc
     
 # dalvik optimizations
-PRODUCT_COPY_FILES += \
-    device/lge/geeb/extras/dalvik/bin/dalvikvm:system/bin/dalvikvm \
-    device/lge/geeb/extras/dalvik/bin/dexopt:system/bin/dexopt \
-    device/lge/geeb/extras/dalvik/lib/libc.so:system/lib/libc.so \
-    device/lge/geeb/extras/dalvik/lib/libcutils.so:system/lib/libcutils.so \
-    device/lge/geeb/extras/dalvik/lib/libdvm.so:system/lib/libdvm.so \
-    device/lge/geeb/extras/dalvik/lib/libm.so:system/lib/libm.so \
-    device/lge/geeb/extras/dalvik/lib/libqc-opt.so:system/lib/libqc-opt.so
+#PRODUCT_COPY_FILES += \
+#    device/lge/geeb/extras/dalvik/bin/dalvikvm:system/bin/dalvikvm \
+#    device/lge/geeb/extras/dalvik/bin/dexopt:system/bin/dexopt \
+#    device/lge/geeb/extras/dalvik/lib/libc.so:system/lib/libc.so \
+#    device/lge/geeb/extras/dalvik/lib/libcutils.so:system/lib/libcutils.so \
+#    device/lge/geeb/extras/dalvik/lib/libdvm.so:system/lib/libdvm.so \
+#    device/lge/geeb/extras/dalvik/lib/libm.so:system/lib/libm.so \
+#    device/lge/geeb/extras/dalvik/lib/libqc-opt.so:system/lib/libqc-opt.so
