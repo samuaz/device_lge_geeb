@@ -116,6 +116,15 @@ on boot
     # Enable DEBUG_SUSPEND, DEBUG_EXIT_SUSPEND, and DEBUG_WAKEUP
     write /sys/module/wakelock/parameters/debug_mask 7
     
+    # remove FPS lock
+    mount -t debugfs debugfs /sys/kernel/debug
+    write /sys/kernel/debug/msm_fb/0/vsync_enable 0
+    write /sys/kernel/debug/msm_fb/0/hw_vsync_mode 0
+    write /sys/kernel/debug/msm_fb/1/vsync_enable 0
+    write /sys/kernel/debug/msm_fb/1/hw_vsync_mode 0
+    write /sys/kernel/debug/msm_fb/2/vsync_enable 0
+    write /sys/kernel/debug/msm_fb/2/hw_vsync_mode 0
+    
     #frequencys gpu and cpu
     write /sys/class/kgsl/kgsl-3d0/max_gpuclk 400000000
     write /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq 1512000
@@ -128,14 +137,14 @@ on boot
     write /proc/sys/vm/vfs_cache_pressure 1
     write /proc/sys/vm/dirty_background_ratio 1
     write /proc/sys/vm/dirty_ratio 100
-    write /proc/sys/vm/dirty_writeback_centisecs 500
+    write /proc/sys/vm/dirty_writeback_centisecs 200
     write /proc/sys/vm/dirty_expire_centisecs 200
     write /proc/sys/vm/min_free_kbytes 8192
     write /proc/sys/vm/page-cluster 5
     write /proc/sys/vm/oom_kill_allocating_task 1
     write /proc/sys/vm/min_free_order_shift 1
-    #write /sys/block/mmcblk0/queue/nr_requests 4
-    #write /sys/block/mmcblk1/queue/nr_requests 4
+    write /sys/block/mmcblk0/queue/nr_requests 1024
+    write /sys/block/mmcblk1/queue/nr_requests 1024
     
     #ksm tweaks
     write /sys/kernel/mm/ksm/sleep_millisecs 6000

@@ -166,7 +166,15 @@ persist.hwc.mdpcomp.enable=false \
 debug.mdpcomp.maxlayer=0 \
 debug.mdpcomp.logs=0 \
 debug.enabletr=true \
-windowsmgr.max_events_per_sec=180 \
+render_dirty_regions=false \
+render_dirty_regions_property=false \
+RENDER_DIRTY_REGIONS_PROPERTY=false \
+debug.hwui.render_dirty_regions=false \
+debug.hwui.profile.maxframes=300 \
+PROFILE_MAXFRAMES_PROPERTY=300 \
+PROFILE_MAX_FRAMES=300 \
+windowsmgr.max_events_per_sec=450 \
+debug.sf.no_hw_vsync=1 \
 ro.hwui.texture_cache_size=72 \
 ro.hwui.layer_cache_size=48 \
 ro.hwui.r_buffer_cache_size=8 \
@@ -284,7 +292,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.interface=wlan0 \
-	wifi.supplicant_scan_interval=9
+	wifi.supplicant_scan_interval=90
 
 # Enable AAC 5.1 output
 PRODUCT_PROPERTY_OVERRIDES += \
