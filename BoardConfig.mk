@@ -143,25 +143,29 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/lge/geeb
 BOARD_SEPOLICY_DIRS := \
        device/lge/geeb/sepolicy
 
-BOARD_SEPOLICY_UNION := \
+BOARD_SEPOLICY_UNION += \
        app.te \
-       bluetooth.te \
+       bluetooth_loader.te \
+       bridge.te \
+       camera.te \
+       conn_init.te \
        device.te \
-       domain.te \
-       drmserver.te \
        file.te \
        file_contexts \
-       hci_init.te \
-       init_shell.te \
-       keystore.te \
-       mediaserver.te \
        kickstart.te \
-       nfc.te \
+       mediaserver.te \
+       mpdecision.te \
+       netmgrd.te \
+       qmux.te \
        rild.te \
+       rmt.te \
+       sensors.te \
        surfaceflinger.te \
-       system.te \
-       ueventd.te \
-       wpa.te
+       system_server.te \
+       tee.te \
+       te_macros \
+       thermald.te \
+       ueventd.te
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
