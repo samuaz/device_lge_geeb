@@ -35,12 +35,6 @@ PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 PRODUCT_PACKAGES := \
-    libwpa_client \
-    hostapd \
-    wpa_supplicant \
-    wpa_supplicant.conf
-
-PRODUCT_PACKAGES += \
 	lights.msm8960
 
 PRODUCT_PACKAGES += \
@@ -171,16 +165,11 @@ debug.enable.wl_log=0 \
 persist.hwc.mdpcomp.enable=false \
 debug.mdpcomp.maxlayer=0 \
 debug.mdpcomp.logs=0 \
-debug.enabletr=true \
-render_dirty_regions=false \
-render_dirty_regions_property=false \
-RENDER_DIRTY_REGIONS_PROPERTY=false \
-debug.hwui.render_dirty_regions=false \
-debug.hwui.profile.maxframes=300 \
-PROFILE_MAXFRAMES_PROPERTY=300 \
-PROFILE_MAX_FRAMES=300 \
-windowsmgr.max_events_per_sec=450 \
-debug.sf.no_hw_vsync=1 \
+render_dirty_regions=true \
+render_dirty_regions_property=true \
+RENDER_DIRTY_REGIONS_PROPERTY=true \
+debug.hwui.render_dirty_regions=true \
+debug.sf.no_hw_vsync=0 \
 ro.hwui.texture_cache_size=72 \
 ro.hwui.layer_cache_size=48 \
 ro.hwui.r_buffer_cache_size=8 \

@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),geeb)
+ifeq ($(TARGET_DEVICE),mako)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libacdbloader
