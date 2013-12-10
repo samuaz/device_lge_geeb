@@ -49,7 +49,7 @@ qcom)
 echo -n Qualcomm >> $target_owner/staging/device-partial.mk
 ;;
 esac
-echo " blob(s) necessary for Mako hardware" >> $target_owner/staging/device-partial.mk
+echo " blob(s) necessary for geeb hardware" >> $target_owner/staging/device-partial.mk
 echo "PRODUCT_COPY_FILES := \\" >> $target_owner/staging/device-partial.mk
 
 echo "  $target_owner)" >> extract-lists.txt
@@ -78,7 +78,7 @@ if test "$auto_owner" = "$target_owner"
 then
 if test $file != system/lib/libacdbloader.so
 then
-echo "    vendor/$target_owner/mako/proprietary/$(basename $file):$file:$target_owner \\" >> $target_owner/staging/device-partial.mk
+echo "    vendor/$target_owner/geeb/proprietary/$(basename $file):$file:$target_owner \\" >> $target_owner/staging/device-partial.mk
 fi
 echo "            $file \\" >> extract-lists.txt
 fi

@@ -40,6 +40,6 @@ DEVICE=geeb
 PRODUCT=occam
 VERSION=jwr66v
 SRCPREFIX=signed-
-BOOTLOADER=makoz20i
+BOOTLOADER=geebz20i
 RADIO=m9615a-cefwmazm-2.0.1700.84
 source ../../../common/generate-factory-images-common.sh
